@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renad Mohamed | Data Science Student & AI Automation Builder</title>
+<meta name="description" content="Portfolio of Renad Mohamed, second-year Data Science student building AI automations, data projects, and Telegram bots.">
+<style>
+  :root {
+    --pink: #ff5da2;
+    --pink-soft: #2a1220;
+    --ink: #f5f1f4;
+    --muted: #a89fa8;
+    --card: #17121a;
+    --bg: #0c0a0e;
+    --border: #2c2130;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  a { color: var(--pink); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(12,10,14,0.85); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap {
+    max-width: 960px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav .brand { font-weight: 700; letter-spacing: 0.3px; color: var(--ink); }
+  nav .brand span { color: var(--pink); }
+  nav ul { list-style: none; display: flex; gap: 22px; }
+  nav ul a { color: var(--muted); font-size: 0.95rem; }
+  nav ul a:hover { color: var(--pink); text-decoration: none; }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header.hero {
+    padding: 96px 24px 72px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--pink-soft), var(--bg));
+  }
+  .hero .tag {
+    display: inline-block; padding: 5px 14px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--pink);
+    color: var(--pink); font-size: 0.85rem; font-weight: 600; margin-bottom: 18px;
+  }
+  .hero h1 { font-size: 2.6rem; line-height: 1.15; letter-spacing: -0.5px; }
+  .hero h1 span { color: var(--pink); }
+  .hero p.sub {
+    max-width: 620px; margin: 18px auto 0; color: var(--muted); font-size: 1.08rem;
+  }
+  .hero .cta { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 24px; border-radius: 10px;
+    font-weight: 600; font-size: 0.95rem; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-2px); }
+  .btn-primary { background: var(--pink); color: #14060d; box-shadow: 0 6px 18px rgba(255,93,162,0.3); }
+  .btn-ghost { background: var(--card); color: var(--ink); border: 1px solid var(--border); }
+
+  section { padding: 72px 0; }
+  section h2 {
+    font-size: 1.7rem; letter-spacing: -0.3px; margin-bottom: 8px;
+  }
+  section h2::after {
+    content: ""; display: block; width: 44px; height: 3px;
+    background: var(--pink); border-radius: 2px; margin-top: 10px;
+  }
+  section .lead { color: var(--muted); margin-bottom: 34px; max-width: 640px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; align-items: start; }
+  .about-grid p { color: #cfc7ce; margin-bottom: 14px; }
+  .facts { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
+  .facts li { list-style: none; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 0.95rem; }
+  .facts li:last-child { border-bottom: none; }
+  .facts strong { color: var(--pink); font-weight: 600; }
+
+  /* Projects */
+  #projects { background: #110d15; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 14px;
+    padding: 22px; display: flex; flex-direction: column;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(255,93,162,0.12); border-color: var(--pink); }
+  .card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .card .lang {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+    color: var(--pink); margin-bottom: 10px;
+  }
+  .card p { color: var(--muted); font-size: 0.92rem; flex: 1; }
+  .card a.repo { margin-top: 14px; font-weight: 600; font-size: 0.9rem; }
+
+  /* Skills */
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    padding: 8px 16px; background: var(--pink-soft); color: var(--pink);
+    border-radius: 999px; font-size: 0.9rem; font-weight: 600;
+    border: 1px solid var(--border);
+  }
+
+  /* Contact */
+  #contact { text-align: center; }
+  #contact h2::after { margin-left: auto; margin-right: auto; }
+  #contact .lead { margin-left: auto; margin-right: auto; }
+  .contact-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+
+  footer {
+    padding: 28px 24px; text-align: center; color: var(--muted);
+    font-size: 0.85rem; border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 2rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    nav ul { gap: 14px; }
+    nav .brand { font-size: 0.95rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">renad<span>.</span>mohamed</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="tag">Open to internships &amp; collaborations</div>
+  <h1>Hi, I'm <span>Renad Mohamed</span>.<br>I turn data and AI into things that work.</h1>
+  <p class="sub">Second-year Data Science student at Al-Manoufia National University, building AI automations, Telegram bots, and data analysis projects from Tanta, Egypt.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#projects">View my projects</a>
+    <a class="btn btn-ghost" href="https://github.com/revenbetterlife-lang" target="_blank" rel="noopener">GitHub profile</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="lead">A student who learns by shipping.</p>
+    <div class="about-grid">
+      <div>
+        <p>I'm a second-year Data Science student (Class of 2028) at Al-Manoufia National University. I care about the practical side of AI: not just models, but the workflows around them that actually save people time.</p>
+        <p>Most of my work lives in two places: Python, where I analyze data and build OOP-based systems, and n8n, where I design AI automations that connect tools like Gemini, Telegram, WhatsApp, and Odoo into working products.</p>
+        <p>I'm an organizer at Innovate AI, and I competed in the NASA Space Apps Challenge 2026 with team FloraX, where we built a digital-twin concept for plant care and won at the local level in Shebin El-Kom.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>Degree</strong> — B.Sc. Data Science, Class of 2028</li>
+        <li><strong>University</strong> — Al-Manoufia National University</li>
+        <li><strong>Based in</strong> — Tanta, Egypt</li>
+        <li><strong>Focus</strong> — AI automation, data analysis, Python</li>
+        <li><strong>Community</strong> — Organizer at Innovate AI</li>
+        <li><strong>Highlight</strong> — NASA Space Apps Challenge 2026, local winner with team FloraX</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lead">Real code, live on GitHub. Each repo includes a README with setup instructions.</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="lang">Python · NASA Space Apps</div>
+        <h3>FloraX Planner</h3>
+        <p>A digital-twin plant care planner built for the NASA Space Apps Challenge 2026 "Field Shift" challenge with team FloraX. Local winner in Shebin El-Kom.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/FloraX-Planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div class="lang">Python · SQL</div>
+        <h3>Supermarket Sales Analysis</h3>
+        <p>End-to-end retail sales analysis: SQL schema and KPI queries (customer behavior, product performance, revenue) plus a Python analysis and visualization script.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/supermarket-sales-analysis" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div class="lang">Python · OOP</div>
+        <h3>Book Management System</h3>
+        <p>An object-oriented book management system in Python with class-based design, display features, and publication-year validation.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/book-management-system" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div class="lang">n8n · Gemini</div>
+        <h3>AI Telegram Bot</h3>
+        <p>An n8n workflow powering an AI Telegram bot: incoming messages are processed by Gemini and answered automatically, ready to import and configure.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/ai-telegram-bot" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div class="lang">n8n · Gemini · Luma AI</div>
+        <h3>AI Video Generation Workflow</h3>
+        <p>An automation that turns a text prompt into a generated video: Gemini enhances the prompt, Luma AI generates the clip, and n8n orchestrates the polling loop.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/ai-video-generation-workflow" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div class="lang">n8n · WhatsApp · Odoo</div>
+        <h3>WhatsApp Lead Qualification</h3>
+        <p>An n8n workflow that captures incoming WhatsApp messages, extracts contact details, looks them up or creates them in Odoo, and opens a qualified lead automatically.</p>
+        <a class="repo" href="https://github.com/revenbetterlife-lang/whatsapp-lead-qualification" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="lead">Tools I use to go from idea to working product.</p>
+    <div class="skills">
+      <span class="chip">Python</span>
+      <span class="chip">OOP</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Data Analysis</span>
+      <span class="chip">Pandas &amp; Matplotlib</span>
+      <span class="chip">n8n Automation</span>
+      <span class="chip">Telegram Bots</span>
+      <span class="chip">API Integration</span>
+      <span class="chip">AI Video Generation</span>
+      <span class="chip">Gemini API</span>
+      <span class="chip">Odoo</span>
+      <span class="chip">Excel</span>
+      <span class="chip">Git &amp; GitHub</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <p class="lead">Open to internships, freelance automation work, and student collaborations.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:revenbetterlife@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/renad-mohamed-b26a3037b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/revenbetterlife-lang" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built by Renad Mohamed · <a href="https://github.com/revenbetterlife-lang" target="_blank" rel="noopener">github.com/revenbetterlife-lang</a>
+</footer>
+
+</body>
+</html>
