@@ -50,6 +50,7 @@
     text-align: center;
     background: linear-gradient(180deg, var(--pink-soft), var(--bg));
   }
+  .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--pink); box-shadow: 0 0 0 6px rgba(255,93,162,0.15), 0 10px 30px rgba(255,93,162,0.25); display: block; margin: 0 auto 22px; }
   .hero .tag {
     display: inline-block; padding: 5px 14px; border-radius: 999px;
     background: var(--card); border: 1px solid var(--pink);
@@ -146,9 +147,10 @@
 </nav>
 
 <header class="hero">
+  <img class="avatar" src="renad.jpg" alt="Renad Mohamed" width="160" height="160">
   <div class="tag">Open to internships &amp; collaborations</div>
   <h1>Hi, I'm <span>Renad Mohamed</span>.<br>I turn data and AI into things that work.</h1>
-  <p class="sub">Second-year Data Science student at Al-Manoufia National University, building AI automations, Telegram bots, and data analysis projects from Tanta, Egypt.</p>
+  <p class="sub">Second-year Data Science student at Al-Manoufia National University, building AI automations and Telegram bots from Tanta, Egypt.</p>
   <div class="cta">
     <a class="btn btn-primary" href="#projects">View my projects</a>
     <a class="btn btn-ghost" href="https://github.com/revenbetterlife-lang" target="_blank" rel="noopener">GitHub profile</a>
@@ -162,14 +164,14 @@
     <div class="about-grid">
       <div>
         <p>I'm a second-year Data Science student (Class of 2028) at Al-Manoufia National University. I care about the practical side of AI: not just models, but the workflows around them that actually save people time.</p>
-        <p>Most of my work lives in two places: Python, where I analyze data and build OOP-based systems, and n8n, where I design AI automations that connect tools like Gemini, Telegram, WhatsApp, and Odoo into working products.</p>
+        <p>Most of my work lives in two places: Python, where I build OOP-based systems, and n8n, where I design AI automations that connect tools like Gemini, Telegram, WhatsApp, and Odoo into working products.</p>
         <p>I'm an organizer at Innovate AI, and I competed in the NASA Space Apps Challenge 2026 with team FloraX, where we built a digital-twin concept for plant care and won at the local level in Shebin El-Kom.</p>
       </div>
       <ul class="facts">
         <li><strong>Degree</strong> — B.Sc. Data Science, Class of 2028</li>
         <li><strong>University</strong> — Al-Manoufia National University</li>
         <li><strong>Based in</strong> — Tanta, Egypt</li>
-        <li><strong>Focus</strong> — AI automation, data analysis, Python</li>
+        <li><strong>Focus</strong> — AI automation, Python</li>
         <li><strong>Community</strong> — Organizer at Innovate AI</li>
         <li><strong>Highlight</strong> — NASA Space Apps Challenge 2026, local winner with team FloraX</li>
       </ul>
@@ -190,19 +192,7 @@
         <a class="repo" href="https://github.com/revenbetterlife-lang/FloraX-Planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
       </div>
 
-      <div class="card">
-        <div class="lang">Python · SQL</div>
-        <h3>Supermarket Sales Analysis</h3>
-        <p>End-to-end retail sales analysis: SQL schema and KPI queries (customer behavior, product performance, revenue) plus a Python analysis and visualization script.</p>
-        <a class="repo" href="https://github.com/revenbetterlife-lang/supermarket-sales-analysis" target="_blank" rel="noopener">View on GitHub &rarr;</a>
-      </div>
 
-      <div class="card">
-        <div class="lang">Python · OOP</div>
-        <h3>Book Management System</h3>
-        <p>An object-oriented book management system in Python with class-based design, display features, and publication-year validation.</p>
-        <a class="repo" href="https://github.com/revenbetterlife-lang/book-management-system" target="_blank" rel="noopener">View on GitHub &rarr;</a>
-      </div>
 
       <div class="card">
         <div class="lang">n8n · Gemini</div>
@@ -236,9 +226,6 @@
     <div class="skills">
       <span class="chip">Python</span>
       <span class="chip">OOP</span>
-      <span class="chip">SQL</span>
-      <span class="chip">Data Analysis</span>
-      <span class="chip">Pandas &amp; Matplotlib</span>
       <span class="chip">n8n Automation</span>
       <span class="chip">Telegram Bots</span>
       <span class="chip">API Integration</span>
